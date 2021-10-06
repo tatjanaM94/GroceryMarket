@@ -10,5 +10,6 @@ namespace Domain.GroceryMarket.Models
         public string Name { get; set; }
         public string CountryOfOrigin { get; set; }
         public int InStock { get; set; }
+        public ICollection<FruitBayer>FruitBayers { get; set; }
     }
 }

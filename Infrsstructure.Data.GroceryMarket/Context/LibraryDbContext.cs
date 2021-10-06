@@ -15,5 +15,17 @@ namespace Infrastructure.Data.GroceryMarket.Context
 
         public DbSet<Vegetable> Vegetables  { get; set; }
         public DbSet<Fruit> Fruits { get; set; }
+        public DbSet<Buyer> Buyers { get; set; }
+        public DbSet<FruitBayer> FruitBayers { get; set; }
+        public DbSet<VegetableBuyer> VegetableBuyers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<FruitBayer>().HasOne(br => br.Buyer)
+                .WithMany(br => br.FruitBayers).HasForeignKey(br => br.BuyerId);
+            modelBuilder.Entity<FruitBayer>().HasOne(br => br.Fruit)
+                .WithMany(br => br.FruitBayers).HasForeignKey(br=>br.FruitId);
+
+        }
     }
 }
