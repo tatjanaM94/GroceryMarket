@@ -17,4 +17,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.GroceryMarket\Domain.GroceryMarket.csproj" />
+  </ItemGroup>
+
 </Project>

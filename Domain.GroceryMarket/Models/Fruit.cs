@@ -5,11 +5,10 @@ using System.Text;
 
 namespace Domain.GroceryMarket.Models
 {
-     public class Vegetables : AuditableBaseEntity
+    public class Fruit : AuditableBaseEntity
     {
         public string Name { get; set; }
         public string CountryOfOrigin { get; set; }
         public int InStock { get; set; }
-
     }
 }
