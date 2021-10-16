@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Application.GroceryMarket.ViewModels.Fruit
+namespace Web.MVC.GroceryMarket.Models
 {
-    public class FruitViewModel
+    public class FruitsViewModel
     {
         public string Name { get; set; }
 
-        [Display(Name ="Country of Origin")]
+        [Display(Name = "Country of Origin")]
         public string CountryOfOrigin { get; set; }
 
         [Display(Name = " In Stock")]
         public int InStock { get; set; }
-        
     }
 }
